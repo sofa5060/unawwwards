@@ -1,0 +1,86 @@
+.herosection {
+  max-width: 1200px;
+  padding: 50px;
+  margin: 0 auto;
+  display: flex;
+
+  .left {
+    align-self: center;
+
+    h3 {
+      color: #555555;
+    }
+
+    h1 {
+      color: #333333;
+      max-width: 530px;
+    }
+
+    button {
+      padding: 20px 25px;
+    }
+  }
+
+  .right {
+    margin: 0 0 0 auto;
+
+    img {
+      display: block;
+      border-radius: 10px 10px 0px 0px;
+    }
+
+    .bar {
+      display: flex;
+      background: #fff;
+      padding: 15px 15px 15px 25px;
+      margin: -3px 0 0 0;
+      border-radius: 0px 0px 10px 10px;
+      justify-content: space-between;
+
+      p {
+        max-width: 240px;
+      }
+
+      .vote-button {
+        align-self: center;
+        display: flex;
+        flex-wrap: nowrap;
+        border: 1px solid #be9764;
+        padding: 15px 15px 15px 20px;
+        max-height: 30px;
+        cursor: pointer;
+        transition: 0.3s all ease;
+        justify-content: center;
+
+        h5 {
+          font-family: Roboto;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 19px;
+          letter-spacing: 0.05em;
+          color: #be9764;
+          align-self: center;
+        }
+
+        svg {
+          fill: #be9764;
+          align-self: center;
+          transition: none !important;
+        }
+
+        &:hover {
+          h5 {
+            color: #fff;
+          }
+
+          svg {
+            fill: #fff;
+          }
+
+          background: #be9764;
+        }
+      }
+    }
+  }
+}

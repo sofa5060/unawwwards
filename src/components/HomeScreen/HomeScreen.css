@@ -1,0 +1,107 @@
+.herosection {
+  max-width: 1200px;
+  padding: 50px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.herosection .left {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.herosection .left h3 {
+  color: #555555;
+}
+
+.herosection .left h1 {
+  color: #333333;
+  max-width: 530px;
+}
+
+.herosection .left button {
+  padding: 20px 25px;
+}
+
+.herosection .right {
+  margin: 0 0 0 auto;
+}
+
+.herosection .right img {
+  display: block;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.herosection .right .bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #fff;
+  padding: 15px 15px 15px 25px;
+  margin: -3px 0 0 0;
+  border-radius: 0px 0px 10px 10px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.herosection .right .bar p {
+  max-width: 240px;
+}
+
+.herosection .right .bar .vote-button {
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  border: 1px solid #be9764;
+  padding: 15px 15px 15px 20px;
+  max-height: 30px;
+  cursor: pointer;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.herosection .right .bar .vote-button h5 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.05em;
+  color: #be9764;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.herosection .right .bar .vote-button svg {
+  fill: #be9764;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-transition: none !important;
+  transition: none !important;
+}
+
+.herosection .right .bar .vote-button:hover {
+  background: #be9764;
+}
+
+.herosection .right .bar .vote-button:hover h5 {
+  color: #fff;
+}
+
+.herosection .right .bar .vote-button:hover svg {
+  fill: #fff;
+}
+/*# sourceMappingURL=HomeScreen.css.map */

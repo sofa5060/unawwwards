@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap");
 .navbar {
   padding: 0 0 0 50px;
   display: -webkit-box;
@@ -27,6 +26,12 @@
 
 .navbar .left .logo {
   margin: 0 0 0 70px;
+  font-family: Comic Sans MS;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 31px;
+  letter-spacing: 0.1em;
 }
 
 .navbar .left .logo a {
