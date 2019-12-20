@@ -1,11 +1,17 @@
 import React from 'react';
+import { BrowserRouter, Switch, Route } from "react-router-dom"
+import HomeScreen from './components/HomeScreen/HomeScreen';
+import NavBar from './components/layout/NavBar';
 
 function App() {
   return (
-    <div className="App">
-      hey people
-    </div>
-  );
+    <BrowserRouter>
+        <NavBar />
+      <Switch>
+        <Route exact path="/" component={HomeScreen} />
+      </Switch>
+    </BrowserRouter>
+  )
 }
 
 export default App;

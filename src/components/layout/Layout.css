@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap");
+.navbar {
+  padding: 0 0 0 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #fff;
+  max-height: 79px;
+}
+
+.navbar .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.navbar .left a {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.navbar .left .logo {
+  margin: 0 0 0 70px;
+}
+
+.navbar .left .logo a {
+  color: #333333;
+}
+
+.navbar .right {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.navbar .right a {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.05em;
+  color: #333333;
+  text-decoration: none;
+  margin: 0 25px 0 0;
+}
+
+.navbar .right button {
+  padding: 30px 45px;
+  cursor: pointer;
+}
+/*# sourceMappingURL=Layout.css.map */
