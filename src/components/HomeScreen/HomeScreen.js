@@ -1,6 +1,7 @@
 import React from "react";
 import WinnerSite from "./WinnerSite";
-import "./HomeScreen.css"
+import "./HomeScreen.css";
+import SitesList from "./SitesList";
 
 export default function HomeScreen() {
   return (
@@ -13,8 +14,15 @@ export default function HomeScreen() {
           <button className="submit">SUBMIT A WEBSITE</button>
         </div>
         <div className="right">
-            <WinnerSite />
+          <WinnerSite />
         </div>
+      </div>
+      <hr />
+      <div className="sites">
+        <h2>
+          Nominees <span>they needn’t your vote!</span>
+        </h2>
+        <SitesList />
       </div>
     </div>
   );

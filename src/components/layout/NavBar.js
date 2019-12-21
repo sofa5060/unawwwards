@@ -6,11 +6,11 @@ export default function NavBar() {
   return (
     <div className="navbar">
       <div className="left">
-        <Link class="hamburger">
+        <Link to="/" className="hamburger">
           <svg width="24" height="24">
-            <path d="M0,10 30,10" stroke="#555555" stroke-width="2" />
-            <path d="M0,15 30,15" stroke="#555555" stroke-width="2" />
-            <path d="M0,20 30,20" stroke="#555555" stroke-width="2" />
+            <path d="M0,10 30,10" stroke="#555555" strokeWidth="2" />
+            <path d="M0,15 30,15" stroke="#555555" strokeWidth="2" />
+            <path d="M0,20 30,20" stroke="#555555" strokeWidth="2" />
           </svg>
         </Link>
         <h3 className="logo">
@@ -18,7 +18,7 @@ export default function NavBar() {
         </h3>
       </div>
       <div className="right">
-        <Link>Login / Register</Link>
+        <Link to="/">Login / Register</Link>
         <button className="submit">SUBMIT</button>
       </div>
     </div>
