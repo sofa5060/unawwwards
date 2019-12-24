@@ -155,6 +155,18 @@
           }
         }
 
+        h4 {
+          align-self: center;
+          font-family: Comic Sans MS;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 22px;
+          letter-spacing: 0.05em;
+          color: #555555;
+          padding: 0 18px 0 0;
+        }
+
         .vote-button {
           display: flex;
           align-self: center;
@@ -179,4 +191,44 @@
       }
     }
   }
+}
+
+.section3 {
+  max-width: 1200px;
+  padding: 0 50px;
+  margin: 0 auto;
+  text-align: center;
+
+  .content {
+    padding: 200px 0;
+
+    p {
+      padding: 20px 0 40px 0;
+    }
+
+    button {
+      padding: 20px 25px;
+    }
+  }
+
+  .line {
+    max-width: 780px;
+  }
+
+  .up {
+    margin: 10px 0 0 auto;
+    padding: 13px;
+    background: #fff;
+    max-width: 24px;
+    cursor: pointer;
+
+    svg {
+      fill: #333333;
+    }
+  }
+}
+
+footer{
+  padding: 0 0 50px 0;
+  text-align: center;
 }
