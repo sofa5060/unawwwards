@@ -9,8 +9,11 @@
     display: flex;
     align-self: center;
 
-    a {
+    svg{
       align-self: center;
+      fill: #555;
+      cursor: pointer;
+      margin: 5px 0 0 0;
     }
 
     .logo {
@@ -46,6 +49,20 @@
     button {
       padding: 30px 45px;
       cursor: pointer;
+    }
+  }
+}
+
+.MuiDrawer-root{
+  position: relative;
+  .bottom{
+    position: absolute;
+    bottom: 50px;
+    left: 20%;
+    display: block;
+    h6{
+      font-size: 16px;
+      color: #333333;
     }
   }
 }

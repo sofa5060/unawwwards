@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Site from "./Site";
 import uuid from "uuid/v1";
-import img1 from "../img/Rectangle3.png";
 import img2 from "../img/Rectangle4.png";
 import img3 from "../img/Rectangle5.png";
 import img4 from "../img/Rectangle6.png";

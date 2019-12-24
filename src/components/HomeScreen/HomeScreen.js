@@ -4,11 +4,12 @@ import "./HomeScreen.css";
 import SitesList from "./SitesList";
 import PreviousSitesList from "./PreviousSitesList";
 import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
+import {Link} from "react-router-dom"
 
 export default function HomeScreen() {
   return (
     <div>
-      <div className="herosection">
+      <div className="herosection" id="herosection">
         <div className="left">
           <h3>UN AWWWARDS</h3>
           <h1>The worest place to find design inspiration.</h1>
@@ -41,7 +42,9 @@ export default function HomeScreen() {
         </div>
         <hr className="line" />
         <div className="up">
-          <ArrowUpwardIcon />
+          <a href="#Top">
+            <ArrowUpwardIcon />
+          </a>
         </div>
       </div>
       <footer>
