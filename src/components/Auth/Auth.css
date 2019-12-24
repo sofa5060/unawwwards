@@ -1,0 +1,78 @@
+.back {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 200;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-tap-highlight-color: transparent;
+  opacity: 1;
+  -webkit-transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.back .signup-form {
+  max-width: 400px;
+  position: fixed;
+  left: 50%;
+  top: 10%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 201;
+  background: #fff;
+  text-align: center;
+  padding: 50px 25px 25px 25px;
+}
+
+.back .signup-form h3 {
+  color: #333;
+  padding: 70px 0;
+}
+
+.back .signup-form h3 span {
+  color: #555 !important;
+}
+
+.back .signup-form .firebaseui-idp-button {
+  background: #d03434 !important;
+}
+
+.back .signup-form .firebaseui-idp-button .firebaseui-idp-icon {
+  content: url(../img/G.png);
+}
+
+.back .signup-form .firebaseui-idp-button .firebaseui-idp-text {
+  color: #fff !important;
+  font-family: Comic Sans MS;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.back .signup-form h6 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 19px;
+  text-align: center;
+  color: #999999;
+  padding: 16px 0 0px 0;
+}
+
+.back .signup-form h5 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-decoration: underline;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #330000;
+  display: inline;
+  cursor: pointer;
+}
+/*# sourceMappingURL=Auth.css.map */

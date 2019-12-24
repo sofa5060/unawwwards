@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import "./Layout.css";
-import SideNav from "./SideNav"
+import SideNav from "./SideNav";
+import { AuthContext } from "../Contexts/AuthContext";
 
 export default function NavBar() {
+  const { showForm } = useContext(AuthContext);
   return (
     <div className="navbar">
       <div className="left">
@@ -13,7 +15,9 @@ export default function NavBar() {
         </h3>
       </div>
       <div className="right">
-        <Link to="/">Login / Register</Link>
+        <Link to="/" onClick={showForm}>
+          Login / Register
+        </Link>
         <button className="submit">SUBMIT</button>
       </div>
     </div>

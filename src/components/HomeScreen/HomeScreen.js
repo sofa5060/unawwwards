@@ -1,12 +1,14 @@
-import React from "react";
+import React,{useContext} from "react";
 import WinnerSite from "./WinnerSite";
 import "./HomeScreen.css";
 import SitesList from "./SitesList";
 import PreviousSitesList from "./PreviousSitesList";
 import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
-import {Link} from "react-router-dom"
+import AuthForm from "../Auth/AuthForm"
+import {AuthContext} from "../Contexts/AuthContext"
 
 export default function HomeScreen() {
+  const { auth } = useContext(AuthContext);
   return (
     <div>
       <div className="herosection" id="herosection">
@@ -50,6 +52,7 @@ export default function HomeScreen() {
       <footer>
         <h2>&copy; UnAwwwards. 2020</h2>
       </footer>
+      {auth.isShowed ? <AuthForm /> : null}
     </div>
   );
 }
