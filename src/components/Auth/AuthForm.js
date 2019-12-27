@@ -4,20 +4,25 @@ import firebase from "firebase";
 import "./Auth.css";
 import { AuthContext } from "../Contexts/AuthContext";
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
+import dbServices from "../../dbServices"
 
 export default function AuthForm() {
   const { hideForm } = useContext(AuthContext);
+
   // using firebaseui for showing oAuth buttons
   const uiConfig = {
     signInFlow: "popup",
     signInOptions: [firebase.auth.GoogleAuthProvider.PROVIDER_ID],
     callbacks: {
       signInSuccessWithAuthResult: user => {
-        // getting the information back and setting them in the state
-        console.log(user);
+        if(user.additionalUserInfo.isNewUser){
+          dbServices.signUp(user)
+        }
+        hideForm()
       }
     }
   };
+
   return (
     <div className="back">
       <ClickAwayListener onClickAway={hideForm}>
