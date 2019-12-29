@@ -1,8 +1,7 @@
-import firebase from "./components/Config/fbConfig"
+import firebase from "./components/Config/fbConfig";
 const db = firebase.firestore();
 
 const signUp = data => {
-  console.log("worked")
   db.collection("users")
     .doc(data.user.uid)
     .set({

@@ -8,7 +8,7 @@ import AuthForm from "../Auth/AuthForm"
 import {AuthContext} from "../Contexts/AuthContext"
 
 export default function HomeScreen() {
-  const { auth } = useContext(AuthContext);
+  const { form } = useContext(AuthContext);
   return (
     <div>
       <div className="herosection" id="herosection">
@@ -52,7 +52,7 @@ export default function HomeScreen() {
       <footer>
         <h2>&copy; UnAwwwards. 2020</h2>
       </footer>
-      {auth.isShowed ? <AuthForm /> : null}
+      {form.isShowed ? <AuthForm /> : null}
     </div>
   );
 }

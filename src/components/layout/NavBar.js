@@ -5,7 +5,7 @@ import SideNav from "./SideNav";
 import { AuthContext } from "../Contexts/AuthContext";
 
 export default function NavBar() {
-  const { showForm } = useContext(AuthContext);
+  const { showForm, currentUser } = useContext(AuthContext);
   return (
     <div className="navbar">
       <div className="left">
@@ -15,9 +15,9 @@ export default function NavBar() {
         </h3>
       </div>
       <div className="right">
-        <Link to="/" onClick={showForm}>
+        {currentUser ? <h5>{currentUser.displayName}</h5> : <Link to="/" onClick={showForm}>
           Login / Register
-        </Link>
+        </Link>}
         <button className="submit">SUBMIT</button>
       </div>
     </div>

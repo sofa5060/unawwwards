@@ -14,7 +14,7 @@ const useStyles = makeStyles({
 });
 
 export default function SideNav() {
-  const { showForm } = useContext(AuthContext);
+  const { showForm, currentUser } = useContext(AuthContext);
   const classes = useStyles();
   const [state, setState] = React.useState({
     left: false
@@ -40,7 +40,13 @@ export default function SideNav() {
     >
       <List>
         <ListItem button>
-          <ListItemText primary={"Login / Register"} onClick={showForm}/>
+          {currentUser ? (
+            <ListItemText
+              primary={currentUser.displayName}
+            />
+          ) : (
+            <ListItemText primary={"Login / Register"} onClick={showForm} />
+          )}
         </ListItem>
         <ListItem button>
           <ListItemText primary={"Home"} />
