@@ -1,10 +1,10 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import Site from "./Site";
 import uuid from "uuid/v1";
-import img2 from "../img/Rectangle4.png";
-import img3 from "../img/Rectangle5.png";
-import img4 from "../img/Rectangle6.png";
-import img5 from "../img/Rectangle7.png";
+// import img2 from "../img/Rectangle4.png";
+// import img3 from "../img/Rectangle5.png";
+// import img4 from "../img/Rectangle6.png";
+// import img5 from "../img/Rectangle7.png";
 import { SitesContext } from "../Contexts/SitesContext";
 
 export default function SitesList() {
@@ -48,15 +48,15 @@ export default function SitesList() {
   //   }
   // ]);
 
-  const {sites} = useContext(SitesContext)
+  const { sites } = useContext(SitesContext);
 
-  let rank = 1
+  let rank = 1;
   return (
     <div className="sites-list">
       {/* mapping throw sites and giving every site to site component */}
       {sites.map(site => {
-        rank ++
-        return <Site site={site} key={site.id} rank={rank}/>;
+        rank++;
+        return <Site site={site[0]} siteId={site[1]} key={site[1]} rank={rank} />;
       })}
     </div>
   );

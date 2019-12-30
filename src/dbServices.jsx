@@ -12,4 +12,13 @@ const signUp = data => {
     });
 };
 
-export default { signUp };
+const upVote = siteId => {
+  const uid = firebase.auth().currentUser.uid
+  db.collection("sites")
+    .doc(siteId)
+    .update({
+      upVotes: firebase.firestore.FieldValue.arrayUnion(uid)
+    });
+};
+
+export default { signUp , upVote };

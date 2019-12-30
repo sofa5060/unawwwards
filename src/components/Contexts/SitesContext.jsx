@@ -15,7 +15,8 @@ const SitesContextProvider = props => {
       .where("isApproved", "==", true)
       .get();
       newSites.forEach(doc =>{
-          sitesArr.push(doc.data())
+        const siteData = [doc.data(),doc.id]
+        sitesArr.push(siteData)
       })
       updateSites(sitesArr)
   };
