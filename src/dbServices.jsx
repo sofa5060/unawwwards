@@ -21,4 +21,13 @@ const upVote = siteId => {
     });
 };
 
-export default { signUp , upVote };
+const downVote = siteId => {
+  const uid = firebase.auth().currentUser.uid
+  db.collection("sites")
+    .doc(siteId)
+    .update({
+      upVotes: firebase.firestore.FieldValue.arrayRemove(uid)
+    });
+};
+
+export default { signUp , upVote , downVote };
