@@ -17,7 +17,11 @@
       max-width: 530px;
     }
 
-    button {
+    p{
+      margin: 0 0 40px 0;
+    }
+
+    a {
       padding: 20px 25px;
     }
   }
@@ -111,6 +115,19 @@
     grid-gap: 33px;
     padding: 40px 0;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+
+    .bar{
+      display: flex;
+      justify-content: space-between;
+
+      .right{
+        align-self: center;
+      }
+    }
+    
+    .MuiSkeleton-root{
+      margin: 0 0 10px 0;
+    }
 
     //Styling each site
     .site {
@@ -247,7 +264,7 @@
       padding: 20px 0 40px 0;
     }
 
-    button {
+    a {
       padding: 20px 25px;
     }
   }

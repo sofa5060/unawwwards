@@ -1,0 +1,58 @@
+.site-form {
+  text-align: center;
+  padding: 50px;
+
+  h1 {
+    color: #333333;
+  }
+
+  form {
+    padding: 50px 0 0 0;
+    background: #fff;
+    max-width: 60%;
+    margin: 0 auto;
+    padding: 100px 60px 50px 60px;
+
+    .row {
+      display: flex;
+      padding: 0 0 60px 0;
+
+      h3 {
+        min-width: 100px;
+        text-align: start;
+        margin: 10px 90px 0 0;
+        align-self: center;
+        color: #333333;
+      }
+
+      .site-name {
+        width: 100%;
+      }
+
+      .url-form {
+        max-width: 320px;
+        width: 100%;
+      }
+
+      .description {
+        width: 100%;
+      }
+    }
+
+    .btns {
+      margin: 60px 0 0 auto;
+      text-align: end;
+      display: flex;
+      max-width: 185px;
+
+      a{
+          align-self: center;
+          margin: 0 30px 0 0;
+      }
+
+      .submit {
+        padding: 15px;
+      }
+    }
+  }
+}

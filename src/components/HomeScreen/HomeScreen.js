@@ -6,6 +6,7 @@ import PreviousSitesList from "./PreviousSitesList";
 import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
 import AuthForm from "../Auth/AuthForm"
 import {AuthContext} from "../Contexts/AuthContext"
+import {Link} from "react-router-dom"
 
 export default function HomeScreen() {
   const { form } = useContext(AuthContext);
@@ -16,7 +17,7 @@ export default function HomeScreen() {
           <h3>UN AWWWARDS</h3>
           <h1>The worest place to find design inspiration.</h1>
           <p>Do you know a bad website?</p>
-          <button className="submit">SUBMIT A WEBSITE</button>
+          <Link to="/submit" className="submit">SUBMIT A WEBSITE</Link>
         </div>
         <div className="right">
           <WinnerSite />
@@ -40,7 +41,7 @@ export default function HomeScreen() {
         <div className="content">
           <h1>Do you know a bad website?</h1>
           <p>Fell free to share website that hurts your eyes.</p>
-          <button className="submit">SUBMIT A WEBSITE</button>
+          <Link to="/submit" className="submit">SUBMIT A WEBSITE</Link>
         </div>
         <hr className="line" />
         <div className="up">

@@ -1,0 +1,57 @@
+import React, { useState, useEffect } from "react";
+import TextField from "@material-ui/core/TextField";
+import "./SiteForm.css";
+import { Link } from "react-router-dom";
+
+export default function SiteForm() {
+  const [siteName, setSiteName] = useState("");
+  const [siteURL, setSiteURL] = useState("");
+  const [siteDescription, setSiteDescription] = useState("");
+  
+  return (
+    <div className="site-form">
+      <h1>Submit form</h1>
+      <form>
+        <div className="row">
+          <h3>Site name</h3>
+          <TextField
+            id="standard-basic"
+            label="UnAwwwards"
+            className="site-name"
+            onChange={e => setSiteName(e.target.value)}
+            value={siteName}
+          />
+        </div>
+        <div className="row">
+          <h3>URL</h3>
+          <TextField
+            required
+            id="standard-required"
+            label="www.badsite.com"
+            className="url-form"
+            onChange={e => setSiteURL(e.target.value)}
+            value={siteURL}
+          />
+        </div>
+        <div className="row">
+          <h3>Description</h3>
+          <TextField
+            id="standard-multiline-flexible"
+            label="Multiline"
+            multiline
+            rowsMax="4"
+            className="description"
+            onChange={e => setSiteDescription(e.target.value)}
+            value={siteDescription}
+          />
+        </div>
+        <div className="btns">
+          <Link to="/" className="button">
+            Cancel
+          </Link>
+          <input type="submit" value="SUBMIT" className="submit" />
+        </div>
+      </form>
+    </div>
+  );
+}

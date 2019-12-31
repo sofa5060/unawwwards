@@ -22,7 +22,11 @@
   max-width: 530px;
 }
 
-.herosection .left button {
+.herosection .left p {
+  margin: 0 0 40px 0;
+}
+
+.herosection .left a {
   padding: 20px 25px;
 }
 
@@ -133,6 +137,25 @@
   padding: 40px 0;
   -ms-grid-columns: (minmax(350px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.sites .sites-list .bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.sites .sites-list .bar .right {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.sites .sites-list .MuiSkeleton-root {
+  margin: 0 0 10px 0;
 }
 
 .sites .sites-list .site {
@@ -287,7 +310,7 @@
   padding: 20px 0 40px 0;
 }
 
-.section3 .content button {
+.section3 .content a {
   padding: 20px 25px;
 }
 

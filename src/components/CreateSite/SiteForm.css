@@ -1,0 +1,67 @@
+.site-form {
+  text-align: center;
+  padding: 50px;
+}
+
+.site-form h1 {
+  color: #333333;
+}
+
+.site-form form {
+  padding: 50px 0 0 0;
+  background: #fff;
+  max-width: 60%;
+  margin: 0 auto;
+  padding: 100px 60px 50px 60px;
+}
+
+.site-form form .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 0 60px 0;
+}
+
+.site-form form .row h3 {
+  min-width: 100px;
+  text-align: start;
+  margin: 10px 90px 0 0;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  color: #333333;
+}
+
+.site-form form .row .site-name {
+  width: 100%;
+}
+
+.site-form form .row .url-form {
+  max-width: 320px;
+  width: 100%;
+}
+
+.site-form form .row .description {
+  width: 100%;
+}
+
+.site-form form .btns {
+  margin: 60px 0 0 auto;
+  text-align: end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 185px;
+}
+
+.site-form form .btns a {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: 0 30px 0 0;
+}
+
+.site-form form .btns .submit {
+  padding: 15px;
+}
+/*# sourceMappingURL=SiteForm.css.map */
