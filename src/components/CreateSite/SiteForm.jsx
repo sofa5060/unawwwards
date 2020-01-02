@@ -1,17 +1,22 @@
-import React, { useState, useEffect } from "react";
+iteURLimport React, { useState } from "react";
 import TextField from "@material-ui/core/TextField";
 import "./SiteForm.css";
 import { Link } from "react-router-dom";
+import dbServices from "../../dbServices"
 
 export default function SiteForm() {
   const [siteName, setSiteName] = useState("");
   const [siteURL, setSiteURL] = useState("");
   const [siteDescription, setSiteDescription] = useState("");
+
+  const handleSubmit = () =>{
+    dbServices.addSite(siteName,siteURL,siteDescription)
+  }
   
   return (
     <div className="site-form">
       <h1>Submit form</h1>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="row">
           <h3>Site name</h3>
           <TextField

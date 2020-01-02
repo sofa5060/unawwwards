@@ -30,4 +30,17 @@ const downVote = siteId => {
     });
 };
 
-export default { signUp , upVote , downVote };
+const addSite = (name,url,description) => {
+  db.collection("sites").add({
+    name,
+    url,
+    description,
+    isApproved:false,
+    uploadDate: new Date(),
+    authorId: firebase.auth().currentUser.uid,
+    img:"",
+    upVotes:[]
+})
+}
+
+export default { signUp , upVote , downVote  , addSite};
