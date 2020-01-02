@@ -11,6 +11,9 @@ export default function SiteForm() {
 
   const handleSubmit = () =>{
     dbServices.addSite(siteName,siteURL,siteDescription)
+    setSiteName("")
+    setSiteURL("")
+    setSiteDescription("")
   }
   
   return (
