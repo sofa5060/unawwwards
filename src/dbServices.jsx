@@ -1,4 +1,6 @@
 import firebase from "./components/Config/fbConfig";
+import LogRocket from "logrocket";
+
 const db = firebase.firestore();
 
 const signUp = data => {
@@ -10,10 +12,15 @@ const signUp = data => {
       email: data.additionalUserInfo.profile.email,
       imageURL: data.additionalUserInfo.profile.picture
     });
+
+  LogRocket.identify(data.user.uid, {
+    name: data.additionalUserInfo.profile.name,
+    email: data.additionalUserInfo.profile.email
+  });
 };
 
 const upVote = siteId => {
-  const uid = firebase.auth().currentUser.uid
+  const uid = firebase.auth().currentUser.uid;
   db.collection("sites")
     .doc(siteId)
     .update({
@@ -22,7 +29,7 @@ const upVote = siteId => {
 };
 
 const downVote = siteId => {
-  const uid = firebase.auth().currentUser.uid
+  const uid = firebase.auth().currentUser.uid;
   db.collection("sites")
     .doc(siteId)
     .update({
@@ -30,17 +37,17 @@ const downVote = siteId => {
     });
 };
 
-const addSite = (name,url,description) => {
+const addSite = (title, url, description) => {
   db.collection("sites").add({
-    name,
+    title,
     url,
     description,
-    isApproved:false,
+    isApproved: false,
     uploadDate: new Date(),
     authorId: firebase.auth().currentUser.uid,
-    img:"",
-    upVotes:[]
-})
-}
+    img: "",
+    upVotes: []
+  });
+};
 
-export default { signUp , upVote , downVote  , addSite};
+export default { signUp, upVote, downVote, addSite };

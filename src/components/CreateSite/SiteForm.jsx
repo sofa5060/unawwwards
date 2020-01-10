@@ -5,13 +5,14 @@ import { Link } from "react-router-dom";
 import dbServices from "../../dbServices"
 
 export default function SiteForm() {
-  const [siteName, setSiteName] = useState("");
+  const [siteTitle, setSiteTitle] = useState("");
   const [siteURL, setSiteURL] = useState("");
   const [siteDescription, setSiteDescription] = useState("");
 
-  const handleSubmit = () =>{
-    dbServices.addSite(siteName,siteURL,siteDescription)
-    setSiteName("")
+  const handleSubmit = e =>{
+    e.preventDefault()
+    dbServices.addSite(siteTitle,siteURL,siteDescription)
+    setSiteTitle("")
     setSiteURL("")
     setSiteDescription("")
   }
@@ -26,8 +27,8 @@ export default function SiteForm() {
             id="standard-basic"
             label="UnAwwwards"
             className="site-name"
-            onChange={e => setSiteName(e.target.value)}
-            value={siteName}
+            onChange={e => setSiteTitle(e.target.value)}
+            value={siteTitle}
           />
         </div>
         <div className="row">

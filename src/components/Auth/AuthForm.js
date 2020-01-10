@@ -19,6 +19,7 @@ export default function AuthForm() {
           dbServices.signUp(user)
         }
         hideForm()
+        window.location.reload()
       }
     }
   };

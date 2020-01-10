@@ -5,19 +5,23 @@ export const SitesContext = createContext();
 
 const SitesContextProvider = props => {
   const [sites, updateSites] = useState([]);
-  const [fetching, updateFetching] = useState({ isFetching: true });
+  const [winnerSite, updateWinnerSite] = useState([])
 
   const getSites = async () => {
     const db = firebase.firestore();
-    const sitesArr = [];
+    let sitesArr = [];
     const newSites = await db
       .collection("sites")
       .where("isApproved", "==", true)
+      .limit(9)
       .get();
     newSites.forEach(doc => {
       const siteData = [doc.data(), doc.id];
       sitesArr.push(siteData);
     });
+    sitesArr.sort((a, b) => b[0].upVotes.length - a[0].upVotes.length);
+    updateWinnerSite(sitesArr[0])
+    sitesArr.splice(0,1)
     updateSites(sitesArr);
   };
 
@@ -25,14 +29,8 @@ const SitesContextProvider = props => {
     getSites();
   }, []);
 
-  useEffect(() => {
-    if (sites.length > 0) {
-      updateFetching({ isFetching: false });
-    }
-  }, [sites]);
-
   return (
-    <SitesContext.Provider value={{ sites, fetching }}>
+    <SitesContext.Provider value={{ winnerSite, sites }}>
       {props.children}
     </SitesContext.Provider>
   );

@@ -78,10 +78,11 @@
       align-self: center;
 }
 
-.navbar .right button {
+.navbar .right a:nth-child(2) {
   margin: 0 0 0 25px;
   padding: 30px 45px;
   cursor: pointer;
+  color: #fff;
 }
 
 .MuiDrawer-root {
